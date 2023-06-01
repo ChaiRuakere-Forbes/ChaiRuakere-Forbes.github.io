@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      background-color: #000000;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      height: 100px;
+    }
+    .header2 {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      height: 5px;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
+
+    .header-text {
+      font-size: 40px;
+      flex-grow: 1;
+    }
+
+    .back-button {
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .banner {
+      max-width: 960px;
+      height: 500px;
+      background-color: #ffffff;
+      margin: 0 auto;
+      margin-top: 20px;
+      border: 5px solid black;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .banner video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .banner h2 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .banner img {
+      width: 500px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      background-color: #000000;
+      border-radius: 4px;
+      padding: 20px;
+      border: 5px solid rgb(255, 255, 255);
+    }
+
+    .product img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      border: 3px solid rgb(255, 255, 255);
+    }
+
+    .product h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #f2f2f2;
+    }
+
+    .product p {
+      margin: 0;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="imgs/Bioko_Logo2.png" alt="Logo" class="logo">
+    <div class="header-text">BIOKO TECH QAUDRANT</div>
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+  <div class="header2"></div>
+  <video class="background-video" src="imgs/Animated_Back_Tech.mov" autoplay muted loop></video>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>ALL YOUR TECH NEEDS FOR DOMINATING YOUR POPULATION</h2>
+      <p>From state-of-the-art surveillance systems and advanced data analytics to secure communication networks and sophisticated monitoring devices, our comprehensive range of tech solutions ensures that you stay ahead in an ever-evolving society. We understand the need for robust cybersecurity measures and offer state-of-the-art encryption software, ensuring your privacy and protecting sensitive information. By embracing the latest advancements and leveraging their potential, you can navigate the digital realm with confidence and contribute to the betterment of your population.</p>
+      <img src="imgs/Serpent.png" alt="Banner Image">
+    </div>
+  </div>
+  <div class="container">
+    <div class="product">
+      <img src="imgs/Malware_Attachment.png" alt="Product 1">
+      <h3><b>MALWARE ATTACHMENT</b> <i><small>300,000</small></i></h3>
+      <p>Compatable with RFID rifles and can also be system locked and manually plugged into a cybernetics system. This particular brand completely shuts down any connected systems and causes as much damage as possible i.e shutting down life support systems and artifical organ and limb functions.</p>
+    </div>
+    <div class="product">
+      <img src="imgs/Brain_Computer.png" alt="Product 2">
+      <h3>NURAL BROADCASTER
+        <i><small>20,000,000</small></i>
+      </h3>
+      <p>This product is best used with the "Nurodeck Brain Implant" this is a no bars computing system. coupled with the nurodecks thermite detinator this makes a very effective tool for peacekeeping. For exaple the nurodeck can read an unwanted thought in the implant bearer and administer a shock or even a detenation</p>
+    </div>
+    <div class="product">
+      <img src="imgs/Brain_implant.png" alt="Product 3">
+      <h3><b>NURODECK BRAIN IMPLANT  <i><small>5,000,000</small></i>
+
+      </b></h3>
+      <p>This piece of tech is a central peice to the Bioko family of products. Survielance a biometric analyzer and a bunch of built in goodies to keep your sheeple at maximum effeciency. This product is very adaptable and can fit whatever reigeme you are trying to enforce.</p>
+    </div>
+    <div class="product">
+      <img src="imgs/Dopimine.png" alt="Product 4">
+      <h3>DOPIMINE CARTRIDGES <i><small>10,000</small></i></h3></h3>
+      <p>This product is a consumable item that the Nurodeck uses. After an extended period of having a dopimine gate in the users head the body will stop excreting this essential chemical. This is where you will need to buy externally generated dopimine. that can be placed into the nurodeck.</p>
+    </div>
+    <div class="product">
+      <img src="imgs/Broadcast.png" alt="Product 5">
+      <h3>MY ALL SEEING THIRD EYE <i><small>100,000,000</small></i></h3>
+      <p>welcome to godhood my freind this gives you free rain over all bioko products can. this can be inbuilt into your nurochip or built into any personal device. Just dont go into a manic power trip and kill your mother, kidding, you can do whatever the fuck you want.</p>
+    </div>
+    <div class="product">
+      <img src="imgs/Model_Citezen.png" alt="Product 6">
+      <h3>THE MODEL CITEZEN      
+      <i><small>3,000,000</small></i>
+      </h3>
+      <p>This biomechanical human replica sets a golden example for the rest of your populas. This product can also enter a enforment proticol where it is resistent to damage just image the T-1000 that works for and lives only to serve you.</p>
+    </div>
+  </div>
+  <div class="header2"></div>
+  <div class="header"></div>
+
+  <script>
+    function goBack() {
+      window.location.href = "second.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .header {
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      height: 100px;
+    }
+    .whiteline {
+      background-color: rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      height: 5px;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
+
+    .header-text {
+      font-size: 50px;
+      flex-grow: 1;
+    }
+
+    .back-button {
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .white-banner {
+      background-color: rgb(0, 0, 0);
+      border: 5px solid rgb(255, 255, 255);
+      padding: 20px;
+      margin: 20px auto;
+      height: 700px;
+      width: 920px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-header {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .pause-button {
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <video class="background-video" src="imgs/Animated_Back_Tech.mov" autoplay muted loop></video>
+  <div class="header">
+    <img src="imgs/Bioko_logo3.png" alt="Logo" class="logo">
+    <div class="header-text">BIOKO MEDIA QAUDRANT</div>
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+  <div class="whiteline"></div>
+  <div class="white-banner">
+    <video class="banner-video" width="920" height="600" autoplay>
+      <source src="imgs/bioko ad.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button class="pause-button" onclick="toggleVideoPlayback()">Pause</button>
+  </div>
+
+  <script>
+    var bannerVideo = document.querySelector('.banner-video');
+    var pauseButton = document.querySelector('.pause-button');
+
+    function toggleVideoPlayback() {
+      if (bannerVideo.paused) {
+        bannerVideo.play();
+        pauseButton.textContent = 'Pause';
+      } else {
+        bannerVideo.pause();
+        pauseButton.textContent = 'Play';
+      }
+    }
+
+    function goBack() {
+      window.location.href = "second.html";
+    }
+  </script>
+</body>
+</html>
